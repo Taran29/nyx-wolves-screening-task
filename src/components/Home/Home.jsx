@@ -7,10 +7,9 @@ const Home = ({ setExistingUser }) => {
   const navigate = useNavigate()
 
   useEffect(() => {
-    if (!localStorage.getItem('username')) {
+    if (!localStorage.getItem('user')) {
       navigate('/login')
     }
-
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   return (

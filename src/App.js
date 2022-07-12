@@ -10,13 +10,11 @@ import { useEffect, useState } from 'react';
 function App() {
 
   const [existingUser, setExistingUser] = useState()
-  const [userName, setUserName] = useState('')
 
   useEffect(() => {
     const setUser = () => {
-      if (localStorage.getItem('username')) {
+      if (localStorage.getItem('user')) {
         setExistingUser(true)
-        setUserName(localStorage.getItem('username'))
       } else setExistingUser(false)
     }
     setUser()
@@ -27,11 +25,11 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Navbar existingUser={existingUser} userName={userName} />
+        <Navbar existingUser={existingUser} setExistingUser={setExistingUser} />
         <Routes>
           <Route path="*" element={<Navigate to="/home" />} />
           <Route path="/home" element={<Home setExistingUser={setExistingUser} />} />
-          <Route path="/login" element={<Login setUserName={setUserName} />} />
+          <Route path="/login" element={<Login setExistingUser={setExistingUser} />} />
         </Routes>
       </Router>
     </div>

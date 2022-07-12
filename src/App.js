@@ -1,23 +1,39 @@
-import logo from './logo.svg';
+import {
+  Navbar,
+  Home,
+  Login,
+} from './components'
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
+import { useEffect, useState } from 'react';
 
 function App() {
+
+  const [existingUser, setExistingUser] = useState()
+  const [userName, setUserName] = useState('')
+
+  useEffect(() => {
+    const setUser = () => {
+      if (localStorage.getItem('username')) {
+        setExistingUser(true)
+        setUserName(localStorage.getItem('username'))
+      } else setExistingUser(false)
+    }
+    setUser()
+    window.addEventListener('storage', setUser)
+    return () => window.removeEventListener('storage', setUser)
+  }, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Navbar existingUser={existingUser} userName={userName} />
+        <Routes>
+          <Route path="*" element={<Navigate to="/home" />} />
+          <Route path="/home" element={<Home setExistingUser={setExistingUser} />} />
+          <Route path="/login" element={<Login setUserName={setUserName} />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

@@ -1,0 +1,45 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 20%;
+  align-items: center;
+}
+
+.ui.input.semantic-input {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.ui.input.semantic-input input {
+  width: 100%;
+  font-size: 16px;
+  padding: 5px 10px;
+}
+
+.ui.input.semantic-input input:focus {
+  outline-color: #FF69B4 !important;
+}
+
+.error-text {
+  margin: 10px 0px;
+  align-self: flex-start;
+  color: red;
+}
+
+.ui.button.semantic-button {
+  width: 40%;
+  height: 50px;
+  background: transparent;
+  border-color: #FF69B4;
+  transition: 0.2s linear;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.ui.button.semantic-button:hover {
+  background-color: #FF69B4;
+  color: white;
+}

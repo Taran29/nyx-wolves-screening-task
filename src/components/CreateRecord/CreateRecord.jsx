@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Form, Button, Input, TextArea } from 'semantic-ui-react'
 import firebaseStorage from '../../firebase'
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage'
+import openSocket from 'socket.io-client'
 import './CreateRecord.css'
 
 const CreateRecord = () => {
@@ -61,6 +62,9 @@ const CreateRecord = () => {
   };
 
   useEffect(() => {
+    const socket = openSocket('http://localhost:5001')
+    socket.emit('hello', 5)
+
     if ((images.length > 0) && (images.length === imageUrls.length)) {
       const record = {
         name: name,

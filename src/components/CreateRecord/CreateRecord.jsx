@@ -3,6 +3,7 @@ import { Form, Button, Input, TextArea } from 'semantic-ui-react'
 import firebaseStorage from '../../firebase'
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage'
 import openSocket from 'socket.io-client'
+import { useNavigate } from 'react-router-dom'
 import './CreateRecord.css'
 
 const CreateRecord = () => {
@@ -19,6 +20,8 @@ const CreateRecord = () => {
   const [noImages, setNoImages] = useState(false)
 
   const [progress, setProgress] = useState([])
+
+  const navigate = useNavigate()
 
   const onSubmit = async (e) => {
     e.preventDefault()
@@ -63,14 +66,30 @@ const CreateRecord = () => {
 
   useEffect(() => {
     const socket = openSocket('http://localhost:5001')
-    socket.emit('hello', 5)
 
     if ((images.length > 0) && (images.length === imageUrls.length)) {
       const record = {
         name: name,
         description: description,
-        images: imageUrls
+        images: imageUrls,
+        user: localStorage.getItem('user')
       }
+
+      socket.emit('create', record, (response) => {
+        if (response.status === 401) {
+          navigate('/login')
+          return
+        }
+
+        if (response.status === 400) {
+          alert(response.message)
+          return
+        }
+
+        if (response.status === 200) {
+          navigate('/home')
+        }
+      })
     }
   }, [imageUrls]) //eslint-disable-line react-hooks/exhaustive-deps
 

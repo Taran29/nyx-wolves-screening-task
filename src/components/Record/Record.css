@@ -1,0 +1,60 @@
+.record-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 12%;
+}
+
+.record-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.record-name {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.record-desc {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.images-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.image-container {
+  height: 100%;
+  width: 100%;
+  margin: 0px 10px;
+}
+
+.image-container:first-child {
+  margin-left: 0;
+}
+
+.image-container:last-child {
+  margin-right: 0;
+}
+
+.image-container-single {
+  height: 50%;
+  width: 100%;
+}
+
+.image-container img,
+.image-container-single img {
+  width: 100%;
+  height: auto;
+}

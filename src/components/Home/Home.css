@@ -1,7 +1,7 @@
 .home-container {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 80%;
   margin: 0 auto;
   margin-top: 15%;
   align-items: center;
@@ -9,6 +9,61 @@
 
 .no-records {
   text-align: justify;
+}
+
+.record-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 20px 0px;
+  padding: 20px 30px;
+  transition: 0.2s linear;
+}
+
+.record-container:hover {
+  background-color: #E3E3E3;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.info-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-name {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.info-desc {
+  font-size: 16px;
+}
+
+.record-button {
+  font-size: 24px;
+  opacity: 0;
+  z-index: -1;
+  transition: 0.2s linear;
+  cursor: pointer;
+  margin: 0px 2px;
+}
+
+h2 {
+  margin: 0;
+}
+
+.record-button:first-child {
+  margin-left: 0;
+}
+
+.record-container:hover .record-button {
+  opacity: 1;
+  z-index: 0;
 }
 
 .create-btn {
@@ -28,5 +83,5 @@
 .create-btn:hover {
   color: transparent;
   background-color: #FF69B4;
-  text-shadow: 0 0 0 #fff;
+  text-shadow: 0 0 0 white;
 }

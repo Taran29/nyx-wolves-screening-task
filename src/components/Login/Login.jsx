@@ -3,7 +3,7 @@ import { Input, Button } from 'semantic-ui-react'
 import { useNavigate } from 'react-router-dom'
 import './Login.css'
 
-const Login = ({ setUserName, setExistingUser }) => {
+const Login = ({ setExistingUser }) => {
 
   const [email, setEmail] = useState('')
   const [isEmpty, setIsEmpty] = useState(false)

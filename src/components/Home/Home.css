@@ -1,0 +1,32 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 15%;
+  align-items: center;
+}
+
+.no-records {
+  text-align: justify;
+}
+
+.create-btn {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  border-color: #FF69B4;
+  height: 50px !important;
+  width: 50px !important;
+  background: #fff;
+  color: transparent;
+  text-shadow: 0 0 0 #FF69B4;
+  transition: all 0.2s linear;
+  border-radius: 50%;
+}
+
+.create-btn:hover {
+  color: transparent;
+  background-color: #FF69B4;
+  text-shadow: 0 0 0 #fff;
+}

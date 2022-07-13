@@ -1,0 +1,67 @@
+.create-record-container {
+  margin: 0 auto;
+  margin-top: 11%;
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  align-items: center;
+}
+
+.field {
+  width: 100%;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 5px 10px;
+  font-size: 16px;
+
+}
+
+.field input {
+  margin: 0;
+  border-width: 1px;
+  border-radius: 2px;
+}
+
+.field textarea {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 20px;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline-color: #FF69B4;
+}
+
+.ui.button {
+  width: 40%;
+  height: 50px;
+  background: transparent;
+  border-color: #FF69B4;
+  transition: 0.2s linear;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.ui.button:hover {
+  background-color: #FF69B4;
+  color: white;
+}
+
+.image-input input {
+  padding: 0;
+  margin: 10px 0px;
+}
+
+.loading-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.loading-container progress {
+  margin: 0px 8px;
+}

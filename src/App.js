@@ -2,6 +2,7 @@ import {
   Navbar,
   Home,
   Login,
+  CreateRecord
 } from './components'
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
@@ -30,6 +31,7 @@ function App() {
           <Route path="*" element={<Navigate to="/home" />} />
           <Route path="/home" element={<Home setExistingUser={setExistingUser} />} />
           <Route path="/login" element={<Login setExistingUser={setExistingUser} />} />
+          <Route path="/createRecord" element={<CreateRecord />} />
         </Routes>
       </Router>
     </div>

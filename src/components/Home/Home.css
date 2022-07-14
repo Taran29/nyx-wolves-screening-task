@@ -3,7 +3,7 @@
   flex-direction: column;
   width: 80%;
   margin: 0 auto;
-  margin-top: 15%;
+  margin-top: 15vh;
   align-items: center;
 }
 
@@ -73,7 +73,7 @@ h2 {
   border-color: #FF69B4;
   height: 50px !important;
   width: 50px !important;
-  background: #fff;
+  background-color: #fff !important;
   color: transparent;
   text-shadow: 0 0 0 #FF69B4;
   transition: all 0.2s linear;
@@ -82,6 +82,6 @@ h2 {
 
 .create-btn:hover {
   color: transparent;
-  background-color: #FF69B4;
+  background-color: #FF69B4 !important;
   text-shadow: 0 0 0 white;
 }

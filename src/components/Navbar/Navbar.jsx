@@ -10,6 +10,7 @@ const Navbar = ({ existingUser, setExistingUser }) => {
       <Menu secondary={true}>
         <Menu.Item
           name="Home"
+          onClick={() => navigate('/home')}
         />
         {existingUser &&
           <Menu.Item

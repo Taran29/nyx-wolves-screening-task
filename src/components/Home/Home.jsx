@@ -15,7 +15,6 @@ const Home = ({ socket }) => {
     }
 
     socket.emit('fetchAll', (localStorage.getItem('user')), (response) => {
-      console.log(response)
       setRecords(response.body)
     })
 
@@ -49,7 +48,12 @@ const Home = ({ socket }) => {
                         navigate(`/record/${record._id}`)
                       }}
                     >➡️</span>
-                    <span className='record-button'>✏️</span>
+                    <span
+                      className='record-button'
+                      onClick={() => {
+                        navigate(`/editRecord/${record._id}`)
+                      }}
+                    >✏️</span>
                     <span
                       className='record-button'
                       onClick={() => {
@@ -67,8 +71,6 @@ const Home = ({ socket }) => {
           })}
         </>
       }
-
-
 
       <Button
         className='create-btn'

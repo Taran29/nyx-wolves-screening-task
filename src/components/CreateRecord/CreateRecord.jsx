@@ -107,7 +107,7 @@ const CreateRecord = ({ socket }) => {
       <Form.Field>
         <TextArea
           placeholder="Enter description..."
-          maxLength={100}
+          maxLength={200}
           onChange={(e) => setDescription(e.target.value)}
         />
 

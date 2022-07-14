@@ -1,0 +1,49 @@
+.edit-record-container {
+  margin-top: 15vh;
+}
+
+.create-record-container {
+  width: 60vh;
+}
+
+.create-record-container h2 {
+  margin-bottom: 10px;
+}
+
+.field {
+  width: 100%;
+}
+
+.edit-input input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.field textarea {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+}
+
+.edit-images-container {
+  display: flex;
+  justify-content: space-between;
+  transition: 0.2s linear;
+  padding: 10px 10px 10px 0px;
+  margin: 5px 0px;
+}
+
+.edit-images-container:hover {
+  background-color: #E3E3E3;
+}
+
+.edit-images-container:hover .delete-button {
+  opacity: 1;
+  z-index: 0;
+}
+
+.delete-button {
+  opacity: 0;
+  z-index: -1;
+  transition: 0.2s linear;
+}

@@ -38,7 +38,7 @@ const Record = ({ socket }) => {
           <div className='images-container'>
             {record.images.length > 0 && record.images.map((image, index) => {
               return (
-                <div className={record.images.length === 1 ? 'image-container-single' : 'image-container'}>
+                <div className={record.images.length === 1 ? 'image-container-single' : 'image-container'} key={index}>
                   <img
                     key={index}
                     src={image}

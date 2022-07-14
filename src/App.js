@@ -15,7 +15,7 @@ function App() {
 
   const [existingUser, setExistingUser] = useState()
 
-  const socket = openSocket('http://localhost:5001')
+  const socket = openSocket('http://localhost:5000')
 
   useEffect(() => {
     const setUser = () => {

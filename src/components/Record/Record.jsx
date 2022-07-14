@@ -27,7 +27,7 @@ const Record = ({ socket }) => {
         setRecord(response.body)
       }
     })
-  }, [])
+  }, []) //eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className='record-info-container'>
@@ -42,7 +42,7 @@ const Record = ({ socket }) => {
                   <img
                     key={index}
                     src={image}
-                    alt="Image here"
+                    alt="Loading"
                   />
                 </div>
               )

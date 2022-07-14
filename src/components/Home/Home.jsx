@@ -65,7 +65,7 @@ const Home = ({ socket }) => {
                   </div>
                 </div>
 
-                <img src={record.images[0]} alt="Image here" width={100} height={100} />
+                <img src={record.images[0]} alt="Loading" width={100} height={100} />
               </div>
             )
           })}

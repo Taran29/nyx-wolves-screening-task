@@ -44,7 +44,7 @@ const EditRecord = ({ socket }) => {
         setExistingImages(response.body.images)
       }
     })
-  }, [])
+  }, []) //eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     if ((newImages.length > 0) && (newImageURLs.length === newImages.length)) {
@@ -61,7 +61,7 @@ const EditRecord = ({ socket }) => {
         }
       })
     }
-  }, [newImageURLs])
+  }, [newImageURLs]) //eslint-disable-line react-hooks/exhaustive-deps
 
   const onSubmit = async (e) => {
     e.preventDefault()

@@ -9,6 +9,7 @@
 }
 
 .ui.input.semantic-input {
+  margin-top: 10px;
   width: 100%;
   display: flex;
   justify-content: center;

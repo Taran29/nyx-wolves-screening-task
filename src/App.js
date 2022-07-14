@@ -15,7 +15,7 @@ function App() {
 
   const [existingUser, setExistingUser] = useState()
 
-  const socket = openSocket('https://nyx-wolves-screening-task.herokuapp.com:80')
+  const socket = openSocket('nyx-wolves-screening-task.herokuapp.com:80')
   console.log(socket)
 
   useEffect(() => {
